@@ -7,7 +7,7 @@ import (
 )
 
 func RegisterRoutes(app *fiber.App) {
-	app.Get("/", controllers.HealthCheck)
+	//app.Get("/", controllers.HealthCheck)
 	app.Get("/pilots", controllers.GetPilots)
 	app.Get("/missionTypes/:pilot", controllers.GetMissionType)
 	app.Get("/weapons/:pilot/:missionType", controllers.GetWeapons)
