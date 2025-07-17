@@ -25,3 +25,8 @@ func main() {
 
 	log.Fatal(app.Listen(":8001"))
 }
+
+//move the chart up
+//dont display more than 150m
+//auto select first weapon
+//move selectPilot and selectMission on same line (checkout bootstrap)
