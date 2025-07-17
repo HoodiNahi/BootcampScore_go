@@ -18,7 +18,7 @@ func main() {
 	app := fiber.New()
 
 	routes.RegisterRoutes(app)
-	app.Static("/", "./frontend")
+	app.Static("/", "./frontend/build")
 
 	app.Get("*", func(c *fiber.Ctx) error {
 		return c.SendFile("./frontend/build/index.html")
