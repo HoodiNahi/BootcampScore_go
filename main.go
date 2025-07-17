@@ -4,6 +4,7 @@ import (
 	"bootcamp-tracker-go/config"
 	"bootcamp-tracker-go/database"
 	"bootcamp-tracker-go/routes"
+	"os"
 
 	"log"
 
@@ -23,10 +24,10 @@ func main() {
 		return c.SendFile("./frontend/index.html")
 	})
 
-	log.Fatal(app.Listen(":8001"))
+	log.Fatal(app.Listen(os.Getenv("APP_LISTEN")))
 }
 
-//move the chart up
-//dont display more than 150m
-//auto select first weapon
-//move selectPilot and selectMission on same line (checkout bootstrap)
+//move the chart up - DONE
+//dont display more than 150m - DONE
+//auto select first weapon - DONE
+//move selectPilot and selectMission on same line (checkout bootstrap) - DONE
